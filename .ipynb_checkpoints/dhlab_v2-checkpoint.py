@@ -83,15 +83,16 @@ class Ngram():
         self.words = words
         self.lang = lang
         if not doctype is None:
-            doctype = 'bok'
             if 'bok' in doctype:
                 doctype = 'bok'
             elif 'avis' in doctype:
                 doctype = 'avis'
+            else:
+                doctype = 'bok'
         else:
             doctype = 'bok'
         ngrm = nb_ngram(terms = ', '.join(words), corpus = doctype, years = (from_year, to_year))
-        ngrm.index = ngrm.index.astype(str)
+        #ngrm.index = ngrm.index.astype(str)
         self.ngram = ngrm
         return None
 
@@ -327,7 +328,7 @@ def collocation(corpusquery = 'norge', word = 'arbeid', before = 5, after = 0):
 def nb_ngram(terms, corpus='bok', smooth=3, years=(1810, 2010), mode='relative'):
     df = ngram_conv(get_ngram(terms, corpus=corpus), smooth=smooth, years=years, mode=mode)
     df.index = df.index.astype(int)
-    return df
+    return df.sort_index()
 
 def get_ngram(terms, corpus='avis'):
     req = requests.get(
