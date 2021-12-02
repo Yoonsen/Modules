@@ -6,6 +6,10 @@ import networkx as nx
 BASE_URL = "https://api.nb.no/dhlab"
 BASE_URL1 = "https://api.nb.no/dhlab"
 
+
+NGRAM_API = "https://api.nb.no/dhlab/nb_ngram/ngram/query"
+GALAXY_API = "https://api.nb.no/dhlab/nb_ngram_galaxies/galaxies/query"
+
 pd.options.display.max_rows = 100
 
 
@@ -332,7 +336,7 @@ def nb_ngram(terms, corpus='bok', smooth=3, years=(1810, 2010), mode='relative')
 
 def get_ngram(terms, corpus='avis'):
     req = requests.get(
-        "https://beta.nb.no/dhlab/ngram_1/ngram/query?", 
+        NGRAM_API, 
         params = { 
             'terms':terms,
             'corpus':corpus
@@ -370,7 +374,7 @@ def make_word_graph(words, corpus = 'all', cutoff = 16, leaves = 0):
     params['corpus'] = corpus
     params['limit'] = cutoff
     params['leaves'] = leaves
-    result = requests.get("https://beta.nb.no/dhlab/galaxies/query", params=params)
+    result = requests.get(GALAXY_API, params=params)
     G = nx.DiGraph()
     edgelist = []
     if result.status_code == 200:
