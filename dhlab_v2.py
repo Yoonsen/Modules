@@ -246,8 +246,9 @@ def get_word_frequencies(urns = None, cutoff = 0, words = None):
     r = requests.post(BASE_URL1 + "/frequencies", json = params)
     result = r.json()
     structure = {u[0][0] : dict([(x[1],x[2]/x[3]) for x in u]) for u in result if u != []}
+    df = pd.DataFrame(structure)
+    return df.sort_values(by = df.columns[0], ascending = False)
 
-    return structure
 
 def get_document_corpus(**kwargs):
     return document_corpus(**kwargs)
