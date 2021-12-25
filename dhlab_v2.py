@@ -72,6 +72,9 @@ class Cooccurence():
         mask = mask[mask.relevance > relevance]
         return list(mask.sort_values(by = 'counts', ascending = False).head(200).index)
     
+    def find(self, words):
+        return self.coll.loc[[w for w in words if w in self.coll.index]]
+    
 class Ngram():
     def __init__(self, words = None, from_year = None, to_year = None, doctype = None, lang = 'nob'):
         from datetime import datetime
