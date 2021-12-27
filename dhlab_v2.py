@@ -12,6 +12,7 @@ GALAXY_API = "https://api.nb.no/dhlab/nb_ngram_galaxies/galaxies/query"
 
 pd.options.display.max_rows = 100
 
+MAX_CORPUS = 14300  # sjekk opp det her, concordance fungerer ikke med større korpus
 
 import re
 
@@ -36,7 +37,11 @@ def get_metadata(urns = None):
 class Concordance:
     """Wrapper for concordance function with added functionality"""
     def __init__(self, corpus, query):
-        self.concordance = concordance(urns = list(corpus.urn), words = query)
+        self.concordance = concordance(
+            urns = list(
+                corpus.urn.sample(min(MAX_CORPUS, len(corpus.urn)))
+            ),
+            words = query)
         self.concordance['link'] = self.concordance.urn.apply(make_link)
         self.concordance = self.concordance[['link', 'urn', 'conc']]
         self.concordance.columns = ['link', 'urn', 'concordance']
