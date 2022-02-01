@@ -76,7 +76,7 @@ def update(module="", overwrite=True, silent=False):
         )
     return
 
-def css(url = "https://raw.githubusercontent.com/Yoonsen/Modules/master/css_style_sheets/nb_notebook.css"):
+def css(url = "https://raw.githubusercontent.com/Yoonsen/Modules/master/css_style_sheets/comments.css"):
     """Associate a css stylesheet with the notebook, just specify a file or web reference, default is a custom css"""
     
     uri = urlparse(url)
