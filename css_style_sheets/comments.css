@@ -1,0 +1,28 @@
+body  {
+    margin:5px;
+}
+
+.jp-MarkdownOutput, .text_cell_render {
+
+    background-color:#FEF9E7;    
+}
+
+p {
+    color: Black;
+    font-size: 1.2em;
+    font-family:Serif;
+}
+  
+h1, h2, h3 {
+    color:FireBrick;
+
+}
+
+h1:after, h2:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:3px solid DarkSlateGray; /* FireBrick; */
+}
