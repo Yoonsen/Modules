@@ -1,3 +1,6 @@
+%%HTML
+
+<style>
 body  {
     margin:5px;
 }
@@ -5,6 +8,9 @@ body  {
 .jp-MarkdownOutput, .text_cell_render {
 
     background-color:#FEFBF1;    
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);;
 }
 
 p {
@@ -18,11 +24,21 @@ h1, h2, h3 {
 
 }
 
-h1:after, h2:after {
+h1:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
     /*margin: 0 auto; This will center the border. */
     width: 50%; /* Change this to whatever width you want. */
     padding-top: 10px;
-    border-bottom:3px solid DarkSlateGray; /* FireBrick; */
+    border-bottom:3px solid SlateGray; /* FireBrick; */
 }
+
+h2:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:2px solid SlateGray; /* FireBrick; */
+}
+</style>
