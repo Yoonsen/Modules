@@ -1,9 +1,5 @@
-@import url(
-http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Merriweather|Shippori+Mincho|Istok+Web|Philosopher|Assistant:200,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Merriweather|Shippori+Mincho|Istok+Web|Philosopher|Assistant:200,400,700);
 
-%%HTML
-
-<style>
 body  {
     margin:5px;
 }
@@ -50,7 +46,3 @@ h2:after {
     padding-top: 10px;
     border-bottom:2px solid SlateGray; /* FireBrick; */
 }
-</style>
-
-
-
