@@ -28,6 +28,8 @@ h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 2em;
     color:FireBrick;
+    font-weight: 600;
+}
 
 }
 
@@ -50,11 +52,5 @@ h2:after {
 }
 </style>
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 2em;
-    color: #004f99;
-    font-weight: 600;
-}
 
 
