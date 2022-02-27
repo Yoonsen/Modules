@@ -1,33 +1,48 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Philosopher|Montserrat|Source+Code+Pro|Merriweather|Shippori+Mincho|Istok+Web|Philosopher|Assistant:200,400,700);
 
-body  {
-    margin:5px;
+p {
+    font-size:1.3em;
+    font-family:serif;
+    line-height:1.4em;
+    color:#142850;
+}
+h1, h2, h3, h4 {
+    color:#27496d;
 }
 
-.jp-MarkdownOutput, .text_cell_render {
+/*
+.prompt, .jp-InputPrompt, .jp-InputArea-prompt, .jp-OutputPrompt, .jp-OutputArea-prompt {
+    visibility: hidden; 
+}
+
+
+.jp-CodeCell .jp-Notebook-cell    {
+    margin-left:10%;
+    margin-right:5%;
+}
+
+
+.jp-InputArea, .jp-OutputArea {
+    margin-left:2.5em;
+    margin-right:2.5em;
+}
+*/
+
+
+body  {
+    margin:10%;
+    counter-reset: h1counter;
+
+}
+
+/* .jp-MarkdownOutput, .text_cell_render {
 
     background-color:#FEFBF1;    
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0,0,0, 0.10);;
-}
+} */
 
-p {
-	font-family: 'Shippori+Mincho'; 
-	font-size:1.1em;
-    color: Black;
-    font-size: 1.2em;
-    font-family:Serif;
-}
-  
-h1, h2, h3 {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 2em;
-	color:FireBrick;
-	font-weight: 600;
-}
-
-}
 
 h1:after {
     content: ""; /* This is necessary for the pseudo element to work. */ 
@@ -46,3 +61,4 @@ h2:after {
     padding-top: 10px;
     border-bottom:2px solid SlateGray; /* FireBrick; */
 }
+
