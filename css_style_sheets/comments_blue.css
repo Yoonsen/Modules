@@ -1,0 +1,62 @@
+
+p {
+    font-size:1.3em;
+    font-family:serif;
+    line-height:1.4em;
+    color:#142850;
+}
+h1, h2, h3, h4 {
+    color:#27496d;
+}
+
+/*
+.prompt, .jp-InputPrompt, .jp-InputArea-prompt, .jp-OutputPrompt, .jp-OutputArea-prompt {
+    visibility: hidden; 
+}
+
+
+.jp-CodeCell .jp-Notebook-cell    {
+    margin-left:10%;
+    margin-right:5%;
+}
+
+
+.jp-InputArea, .jp-OutputArea {
+    margin-left:2.5em;
+    margin-right:2.5em;
+}
+*/
+
+
+body  {
+    margin:10%;
+    counter-reset: h1counter;
+
+}
+
+/* .jp-MarkdownOutput, .text_cell_render {
+
+    background-color:#FEFBF1;    
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);;
+} */
+
+
+h1:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:3px solid SlateGray; /* FireBrick; */
+}
+
+h2:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    /*margin: 0 auto; This will center the border. */
+    width: 30%; /* Change this to whatever width you want. */
+    padding-top: 10px;
+    border-bottom:2px solid SlateGray; /* FireBrick; */
+}
